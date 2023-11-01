@@ -425,7 +425,7 @@
   "sourceMap": "190:166:0:-:0;;;217:26;;;;;;;;;;190:166;;;;;;",
   "deployedSourceMap": "190:166:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;274:80;;;:::i;:::-;;;306:12;314:3;306:12;;;;;;:::i;:::-;;;;;;;;274:80::o;7:87:1:-;54:7;83:5;72:16;;7:87;;;:::o;100:77::-;137:7;166:5;155:16;;100:77;;;:::o;183:60::-;211:3;232:5;225:12;;183:60;;;:::o;249:162::-;309:9;342:63;360:44;369:34;397:5;369:34;:::i;:::-;360:44;:::i;:::-;342:63;:::i;:::-;329:76;;249:162;;;:::o;417:151::-;514:47;555:5;514:47;:::i;:::-;509:3;502:60;417:151;;:::o;574:242::-;677:4;715:2;704:9;700:18;692:26;;728:81;806:1;795:9;791:17;782:6;728:81;:::i;:::-;574:242;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\n// https://medium.com/haloblock/deploy-your-own-smart-contract-with-truffle-and-ganache-cli-beginner-tutorial-c46bce0bd01e\n\ncontract MyContract {\n  \n  constructor() public {\n  }\n\n  event MyEvent(uint nr);\n\n  function hi() public {\n    emit MyEvent(123);\n    // return (\"Hello World\");\n  }\n}\n",
-  "sourcePath": "/Users/wvw/git/n3/blockiot-cds/SmartContractDemo/contract/contracts/MyContract.sol",
+  "sourcePath": "/Users/wvw/git/n3/blockiot-cds/example_oracle/contract/contracts/MyContract.sol",
   "ast": {
     "absolutePath": "project:/contracts/MyContract.sol",
     "exportedSymbols": {
@@ -649,12 +649,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x04371e14e203487EdcF0bFfdA24342aFF96B919A",
-      "transactionHash": "0x4848c548b2207bf4a3cbe03461ce74258f40fcaaf21b44b68184a49015c649a6"
+      "address": "0x9CB0E5268f445f5E2a3115A66ed802D3f8B6Ccf7",
+      "transactionHash": "0x8272c6bb994038b3f870c04bc9c37579ae9a56fa9d8cff4b41aa576ee0bc077e"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-11-01T19:50:41.524Z",
+  "updatedAt": "2023-11-01T20:03:49.657Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
