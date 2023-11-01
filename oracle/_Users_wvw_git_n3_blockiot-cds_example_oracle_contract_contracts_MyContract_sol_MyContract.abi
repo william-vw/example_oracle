@@ -1,1 +1,0 @@
-[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"nr","type":"uint256"}],"name":"MyEvent","type":"event"},{"inputs":[],"name":"hi","outputs":[],"stateMutability":"nonpayable","type":"function"}]

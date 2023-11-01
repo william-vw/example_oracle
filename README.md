@@ -2,15 +2,15 @@
 
 ### Run ganache (UI or CLI)
 - UI allows checking issued events (not supported by ganache-cli)  
-(first time in UI: link truffle contract project (contracts > "add project"))
-- Note port number & update `contract/truffle-config.js`, `oracle/app[n].js`
+(first time in UI: link truffle contract project (contracts > "add project"; select project's "truffle-config.js"))
+- Note port number & update `contract/truffle-config.js`, `web3/*.js`
 
 
 ### Compile & deploy contract
 - Compile new ABI (~ "stub") to be referred by web3js:  
-(if new, copy filename to `oracle/app[n].js`)
+(if changed, copy filename to `web3/*.js`)
 ```
-oracle % solcjs ../contract/contracts/MyContract.sol --abi
+web3 % solcjs ../contract/contracts/MyContract.sol --abi
 ```
 
 - Re-compile contract & deploy ("migrate") to ganache
@@ -19,11 +19,11 @@ contract % sudo truffle compile
 contract % sudo truffle migrate
 ```
 
-- Note new contract address & update `oracle/app[n].js`
+- Note new contract address & update `web3/*.js`
 
 
-# Run oracles
+# Run client & oracle
 ```
-oracle % node app1.js
-oracle % node app2.js
+web3 % node oracle.js
+web3 % node client.js
 ```

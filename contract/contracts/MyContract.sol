@@ -8,10 +8,16 @@ contract MyContract {
   constructor() public {
   }
 
-  event MyEvent(uint nr);
+  event MyDataRequestEvent(string req);
 
-  function hi() public {
-    emit MyEvent(123);
-    // return ("Hello World");
+  event AllDoneEvent(string results);
+
+  function process(string memory data) public {
+    // ...
+    emit MyDataRequestEvent(string.concat("get me data to process '", data, "'"));
+  }
+
+  function results(string memory someOtherData) public {
+    emit AllDoneEvent(string.concat("based on '", someOtherData, "', we're finally done"));
   }
 }
