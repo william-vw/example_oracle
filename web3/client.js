@@ -2,7 +2,7 @@ const { Web3 } = require("web3");
 const fs = require('fs');
 
 // update when deploying contract
-const CONTRACT_ADDRESS = "0xd7c8eb8ec6f818DAB68375B2D3E5f61D719F2977";
+const CONTRACT_ADDRESS = "0xaf08BEc38278ce089804b61779ECe1a7a2ae1d8a";
 
 // ("ws" protocol needed for event subscriptions)
 const web3 = new Web3("ws://127.0.0.1:7545"); // copy port from ganache ui / cli output
@@ -16,11 +16,11 @@ async function run() {
 
     // receive result events
     // (fromBlock: update to avoid getting older events)
-    const evt = contract.events.AllDoneEvent({ filter: { value: [] }, fromBlock: 13 });
+    const evt = contract.events.AllDoneEvent({ filter: { value: [] }, fromBlock: 25 });
     evt.on("connected", function (subscriptionId) { console.log("subscriptionId:", subscriptionId); });
     evt.on('data', async function (event) { console.log("got result event:", event); });
 
     // call contract to process claim
-    await contract.methods.process("abc").send({ from: account });
+    await contract.methods.process({ field1: "abc", field2: "def" }).send({ from: account });
 }
 run();
